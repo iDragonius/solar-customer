@@ -3,7 +3,7 @@
 @tailwind utilities;
 
 .box {
-    @apply  min-[1440px]:w-[1240px] min-[1440px]:mx-auto ;
+    @apply  min-[1440px]:w-[1240px] min-[1440px]:mx-auto max-[1440px]:w-full max-[1440px]:mx-16 max-[1000px]:mx-12 ;
 }
 
 
