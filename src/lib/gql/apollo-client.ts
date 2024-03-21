@@ -10,6 +10,7 @@ import { onError } from "@apollo/client/link/error";
 import { concatPagination } from "@apollo/client/utilities";
 import merge from "deepmerge";
 import isEqual from "lodash/isEqual";
+import Config from "@/lib/config";
 
 export const APOLLO_STATE_PROP_NAME = "__APOLLO_STATE__";
 
@@ -26,7 +27,7 @@ const errorLink = onError(({ graphQLErrors, networkError }) => {
 });
 
 const httpLink = new HttpLink({
-  uri: "http://127.0.0.1:1337/graphql",
+  uri: Config.serverUrl + "/graphql",
   credentials: "same-origin",
 });
 
