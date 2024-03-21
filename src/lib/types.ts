@@ -24,7 +24,15 @@ export type ImageProps = {
     };
   };
 };
-
+export type ProductCategoryProps = {
+  id: string;
+  attributes: {
+    name: string;
+    products: {
+      data: ProductProps[];
+    };
+  };
+};
 export type ProductProps = {
   id: string;
   attributes: {
