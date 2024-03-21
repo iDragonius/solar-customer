@@ -46,7 +46,11 @@ const AboutPage: FC<AboutPageProps> = () => {
         <title>Haqqımızda</title>
       </Head>
       <main className={"box"}>
-        <h1 className={"font-bold text-40 text-primary-foreground mt-20 mb-12"}>
+        <h1
+          className={
+            "font-bold text-24 sm:text-40 text-primary-foreground sm:mt-20 mt-12 sm:mb-12 mb-8"
+          }
+        >
           Haqqımızda
         </h1>
         <div className={"max-w-[800px]"}>

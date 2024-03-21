@@ -29,10 +29,18 @@ const OurProjectsPage: FC<OurProjectsPageProps> = () => {
         <title>Görülən işlər</title>
       </Head>
       <main className={"box"}>
-        <h1 className={"font-bold text-40 text-primary-foreground mt-20 mb-12"}>
+        <h1
+          className={
+            "font-bold text-24 sm:text-40 text-primary-foreground sm:mt-20 mt-12 sm:mb-12 mb-8"
+          }
+        >
           Görülən işlər
         </h1>
-        <div className={"grid-cols-4 grid gap-8"}>
+        <div
+          className={
+            "grid grid-cols-1 sm:grid-cols-2 min-[800px]:grid-cols-3 min-[1100px]:grid-cols-4 gap-8"
+          }
+        >
           {data?.projects.data.map((project) => (
             <Link
               href={`/about-us/our-projects/${slugify(project.attributes.name)}-${project.id}`}

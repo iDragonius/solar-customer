@@ -41,11 +41,15 @@ const ProductsPage: FC<ProductsPageProps> = () => {
         <title>Məhsullar</title>
       </Head>
       <main className={"box"}>
-        <h1 className={"font-bold text-40 text-primary-foreground mt-20 mb-12"}>
+        <h1
+          className={
+            "font-bold text-24 sm:text-40 text-primary-foreground sm:mt-20 mt-12 sm:mb-12 mb-8"
+          }
+        >
           Məhsullar
         </h1>
-        <div className={"flex justify-between"}>
-          <div className={"w-[250px]"}>
+        <div className={"flex justify-between gap-5 max-sm:flex-col"}>
+          <div className={"w-full sm:w-[250px]"}>
             <h3
               className={"text-20 mb-4 text-primary-foreground font-semibold"}
             >
@@ -69,7 +73,11 @@ const ProductsPage: FC<ProductsPageProps> = () => {
             </div>
           </div>
 
-          <div className={"grid-cols-3 grid gap-8"}>
+          <div
+            className={
+              "  grid-cols-2  sm:grid-cols-1 min-[750px]:grid-cols-2 min-[1100px]:grid-cols-3 grid gap-8"
+            }
+          >
             {selectedCategory?.attributes.products.data.map((product) => (
               <Link
                 href={`/products/${slugify(product.attributes.name)}-${product.id}`}

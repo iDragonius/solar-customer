@@ -43,7 +43,7 @@ const OurProjectPage: FC<OurProjectPageProps> = () => {
       <Head>
         <title>{data?.project.data.attributes.name}</title>
       </Head>
-      <main className={"box flex gap-8 mt-20"}>
+      <main className={"box max-[900px]:flex-col flex gap-8 mt-20"}>
         <Image
           loader={imageLoader}
           src={

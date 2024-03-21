@@ -1,4 +1,4 @@
-import React, { FC, ReactNode } from "react";
+import React, { FC, ReactNode, useState } from "react";
 import Header from "@/components/layout/ui/header";
 import Footer from "@/components/layout/ui/footer";
 import cn from "@/lib/utils/cn";
@@ -8,6 +8,7 @@ import GET_LAYOUT, {
   type GetLayoutResponse,
 } from "@/lib/gql/queries/layout.query";
 import Config from "@/lib/config";
+import MobileNavigation from "@/components/layout/ui/mobile-navigation";
 
 export interface LayoutProps {
   children: ReactNode;
@@ -19,13 +20,23 @@ const Layout: FC<LayoutProps> = ({ children }) => {
       locale: Config.defaultLocale,
     },
   });
+  const [open, setOpen] = useState<boolean>(false);
   if (loading) {
     return <></>;
   }
+
   return (
     <main className={cn(DmSans.className)}>
+      {open && (
+        <MobileNavigation
+          close={() => setOpen(false)}
+          navigations={data?.navigation.data.attributes.navigations || []}
+        />
+      )}
       <div className={"min-h-[calc(100vh-80px)]"}>
         <Header
+          open={open}
+          setOpen={setOpen}
           navigations={data?.navigation.data.attributes.navigations || []}
         />
         {children}

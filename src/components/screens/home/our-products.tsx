@@ -21,7 +21,11 @@ const OurProducts: FC<OurProductsProps> = ({ data }) => {
         >
           Bəzi məhsullar
         </h2>
-        <div className={"grid grid-cols-4 gap-8"}>
+        <div
+          className={
+            "grid grid-cols-1 sm:grid-cols-2 min-[800px]:grid-cols-3 min-[1100px]:grid-cols-4 gap-8"
+          }
+        >
           {data.map((product, i) => (
             <Link
               href={`/products/${slugify(product.attributes.name)}-${product.id}`}

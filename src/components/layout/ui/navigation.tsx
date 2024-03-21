@@ -12,7 +12,7 @@ export interface NavigationProps {
 
 const Navigation: FC<NavigationProps> = ({ data }) => {
   return (
-    <div className={"flex gap-8 items-center"}>
+    <div className={"flex gap-8 items-center max-[900px]:hidden"}>
       {data.map((navigation) => (
         <NavigationItem data={navigation} key={navigation.id} />
       ))}

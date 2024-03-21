@@ -17,7 +17,11 @@ const AboutOurProducts: FC<AboutOurProductsProps> = ({ data }) => {
       >
         About our product
       </h2>
-      <div className={"grid grid-cols-3 gap-8"}>
+      <div
+        className={
+          "grid grid-cols-1 sm:grid-cols-2 min-[900px]:grid-cols-3 gap-8"
+        }
+      >
         {data.map((about, i) => (
           <Card data={about} key={i} />
         ))}

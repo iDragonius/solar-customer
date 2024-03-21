@@ -31,9 +31,11 @@ const Hero: FC<HeroProps> = ({ background, animatedTexts, title }) => {
           "absolute w-full h-full left-0 top-0 flex items-center justify-center flex-col  z-50"
         }
       >
-        <h1 className={"text-[90px] text-white font-bold"}>{title}</h1>
+        <h1 className={"text-[60px] sm:text-[90px] text-white font-bold"}>
+          {title}
+        </h1>
         <ReactTyped
-          className={"text-white text-48"}
+          className={"text-white text-28 sm:text-48"}
           typeSpeed={100}
           backSpeed={40}
           strings={[...animatedTexts.map((el) => el.text)]}

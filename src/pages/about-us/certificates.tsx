@@ -34,10 +34,14 @@ const CertificatesPage: FC<CertificatesPageProps> = () => {
         <title>Sertifikatlar</title>
       </Head>
       <main className={"box"}>
-        <h1 className={"font-bold text-40 text-primary-foreground mt-20 mb-12"}>
+        <h1
+          className={
+            "font-bold text-24 sm:text-40 text-primary-foreground sm:mt-20 mt-12 sm:mb-12 mb-8"
+          }
+        >
           Sertifikatlar
         </h1>
-        <div className={"grid-cols-2 grid gap-8"}>
+        <div className={"sm:grid-cols-2 grid gap-8"}>
           {data?.certificate.data.attributes.certificates.map((certificate) => (
             <div key={certificate.id}>
               <Image

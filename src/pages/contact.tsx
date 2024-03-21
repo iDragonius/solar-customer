@@ -90,10 +90,14 @@ const ContactPage: FC<ContactPageProps> = () => {
           </div>
         </div>
         <div className={"box"}>
-          <div className={"flex justify-between mt-12 gap-10"}>
-            <div className={"w-[500px]"}>
+          <div
+            className={"flex max-[900px]:flex-col justify-between mt-12 gap-10"}
+          >
+            <div className={"sm:w-[500px]"}>
               <h2
-                className={"text-28 text-primary-foreground font-semibold mb-5"}
+                className={
+                  "text-20 sm:text-28 text-primary-foreground font-semibold mb-5"
+                }
               >
                 Bizimlə əlaqə üçün:
               </h2>
@@ -170,9 +174,9 @@ const ContactPage: FC<ContactPageProps> = () => {
               Sualınız var?
             </h2>
 
-            <div className={"mt-6 w-[800px] mx-auto"}>
-              <div className={"flex justify-between gap-6"}>
-                <div className={"flex flex-col gap-1.5 w-full"}>
+            <div className={"mt-6 min-[900px]:w-[800px] mx-auto"}>
+              <div className={"flex max-sm:flex-col justify-between gap-6"}>
+                <div className={"flex  flex-col gap-1.5 w-full"}>
                   <label htmlFor="firstName">Adınız</label>
                   <input
                     type="text"
