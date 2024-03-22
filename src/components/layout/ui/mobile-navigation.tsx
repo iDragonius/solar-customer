@@ -42,6 +42,7 @@ const MobileNavigationItem = ({
   if (data.hasLink) {
     return (
       <Link
+        onClick={close}
         href={data.path}
         className={"text-24 font-medium text-primary-foreground"}
       >
@@ -66,6 +67,7 @@ const MobileNavigationItem = ({
               <Link
                 href={data.path + sub.path}
                 key={sub.id}
+                onClick={close}
                 className={"text-primary-foreground text-18"}
               >
                 {sub.label}
